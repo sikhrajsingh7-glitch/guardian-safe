@@ -1,0 +1,37 @@
+name: guardian_safe
+description: "High-security, serverless Girls and Delivery Boy Safety App with OpenStreetMap and J&K Jurisdiction."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Open-source, copyright-free OpenStreetMap rendering (v7)
+  flutter_map: ^7.0.2
+
+  # Geographic coordinates math library for flutter_map
+  latlong2: ^0.9.1
+
+  # High-precision device location and permission handler
+  geolocator: ^13.0.2
+
+  # Local persistence for 5 contacts, legal acceptance, and admin settings (zero server cost)
+  shared_preferences: ^2.3.2
+
+  # Modern native icons
+  cupertino_icons: ^1.0.8
+
+  # URL launcher for direct P2P emergency SMS & UPI Payment intent
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
