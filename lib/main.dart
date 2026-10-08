@@ -13,7 +13,8 @@ class GuardianSafeApp extends StatelessWidget {
       title: 'Guardian Safe',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // Modern Material 3 कलर स्कीम
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
@@ -30,19 +31,24 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Guardian Safe'),
         centerTitle: true,
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.shield, size: 100, color: Colors.blue),
-            SizedBox(height: 20),
-            Text(
+            Icon(
+              Icons.shield, 
+              size: 100, 
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            const SizedBox(height: 20),
+            const Text(
               'Guardian Safe',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            Text('Your safety app is ready!'),
+            const SizedBox(height: 10),
+            const Text('Your safety app is ready!'),
           ],
         ),
       ),
